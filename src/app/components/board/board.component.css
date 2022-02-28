@@ -1,7 +1,7 @@
 .board {
     display: inline-block;
     min-width: 100vh;
-    min-height: 50vh;
+    min-height: 500px;
 }
 
 .board-column {
@@ -12,12 +12,16 @@
     color: black;
     width: 30vh;
     min-height: 50vh;
-    
+    vertical-align: top;
+
 }
 .title-container {
     text-align: center;
     border: 1px solid black;
     font-weight: bold;
+}
+.tasks-area {
+    text-align: center;
 }
 .task-container {
     background-color: yellow;

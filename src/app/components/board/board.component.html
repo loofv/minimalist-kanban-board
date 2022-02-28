@@ -2,15 +2,16 @@
     <!-- <form (submit)="addTodo()" >  -->
     <!-- [(ngModel)]="inputTodo" -->
     <form (submit)="addTask()">
-        <input type="text" name="inputTask" placeholder="Enter task instructions" 
+        <input type="text" name="inputTask" placeholder="Enter task instructions"
         [(ngModel)]="inputTask"
         class="task-input" />
         <input type="submit" value="Add task" class="task-submit" />
     </form>
     <div class="board-column">
         <div class="title-container">
-            <p class="title">To-do</p>
+            <p class="title">To Do</p>
         </div>
+        <div class="tasks-area">
             <div class="task" *ngFor="let task of todo; let i = index">
                 <div class="task-container">
                     <div class="task-left">H</div>
@@ -20,11 +21,13 @@
                     <div class="task-right"(click)="moveTask(todo, inProgress, i)">L</div>
                 </div>
             </div>
+        </div>
     </div>
     <div class="board-column">
         <div class="title-container">
-            <p class="title">In progress</p>
+            <p class="title">Implementing</p>
         </div>
+        <div class="tasks-area">
             <div class="task" *ngFor="let task of inProgress; let i = index">
                 <div class="task-container">
                     <div class="task-left" (click)="moveTask(inProgress, todo, i)">H</div>
@@ -34,11 +37,13 @@
                     <div class="task-right" (click)="moveTask(inProgress, done, i)">L</div>
                 </div>
             </div>
+        </div>
     </div>
     <div class="board-column">
         <div class="title-container">
             <p class="title">Done</p>
         </div>
+        <div class="tasks-area">
             <div class="task" *ngFor="let task of done; let i = index">
                 <div class="task-container">
                     <div class="task-left" (click)="moveTask(done, inProgress, i)">H</div>
@@ -48,5 +53,6 @@
                     <div class="task-right">L</div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
