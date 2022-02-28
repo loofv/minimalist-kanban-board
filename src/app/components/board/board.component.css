@@ -1,0 +1,44 @@
+.board {
+    display: inline-block;
+    min-width: 100vh;
+    min-height: 50vh;
+}
+
+.board-column {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+    color: black;
+    width: 30vh;
+    min-height: 50vh;
+    
+}
+.title-container {
+    text-align: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+.task-container {
+    background-color: yellow;
+    color: black;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.task-left {
+    border: 1px solid black;
+    height: fit-content;
+    padding: 2px;
+}
+
+
+.task-right {
+    border: 1px solid black;
+    height: fit-content;
+    padding: 2px;
+}

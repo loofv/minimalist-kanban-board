@@ -1,0 +1,14 @@
+.board-column {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+    color: black;
+    width: 30vh;
+    min-height: 50vh;
+}
+.title-container {
+    text-align: center;
+    border: 1px solid black;
+    font-weight: bold;
+}

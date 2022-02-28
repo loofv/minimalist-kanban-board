@@ -1,0 +1,10 @@
+.app {
+    color: white;
+    background-color: black;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.help-text-part-2 {
+    margin-bottom: 15px;
+}
