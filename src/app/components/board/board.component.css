@@ -43,6 +43,10 @@
     padding: 2px;
 }
 
+.delete-button {
+    margin: 2px;
+}
+
 
 .task-right {
     border: 1px solid black;

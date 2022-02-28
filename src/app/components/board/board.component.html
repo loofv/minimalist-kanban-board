@@ -28,7 +28,7 @@
                 (cdkDropListDropped)="drop($event)">
                 <div class="task-container" *ngFor="let item of inProgress; let i=index;" cdkDrag>
                     {{item}}
-                    <button (click)="deleteTask(inProgress, i)">Delete</button>
+                    <button class="delete-button" (click)="deleteTask(inProgress, i)">Delete</button>
                 </div>
             </div>
         </div>
