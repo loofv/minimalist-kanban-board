@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-board',
@@ -11,8 +12,8 @@ export class BoardComponent implements OnInit {
   todo: string[] = [
     'asdasd'
   ];
-  inProgress: string[] = [];
-  done: string[] = []
+  inProgress: string[] = ['in progress  task'];
+  done: string[] = [ 'done task']
 
   constructor() { }
 
@@ -32,6 +33,19 @@ export class BoardComponent implements OnInit {
   moveTask(currentList: string[], nextList: string[], index: number) {
     nextList.push(currentList[index])
     currentList.splice(index, 1)
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
 
 }
