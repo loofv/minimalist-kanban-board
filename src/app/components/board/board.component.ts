@@ -9,9 +9,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 export class BoardComponent implements OnInit {
 
   inputTask: string = "";
-  todo: string[] = [
-    'asdasd'
-  ];
+  todo: string[] = ['todo task'];
   inProgress: string[] = ['in progress  task'];
   done: string[] = [ 'done task']
 
